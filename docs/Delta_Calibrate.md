@@ -107,8 +107,12 @@ the "A" tower).
 Then go counterclockwise and measure the distances between the center
 pillar and the other pillars (distance from center to pillar across
 from C label, distance from center to pillar with B label,
-etc.). Enter these parameters into Klipper with a comma separated list
-of floating point numbers:
+etc.).
+
+![delta_cal_e_step1](img/delta_cal_e_step1.png)
+
+Enter these parameters into Klipper with a comma separated list of
+floating point numbers:
 ```
 DELTA_ANALYZE CENTER_DISTS=<a_dist>,<far_c_dist>,<b_dist>,<far_a_dist>,<c_dist>,<far_b_dist>
 ```
@@ -121,8 +125,11 @@ from the C label.
 
 Then go counterclockwise and measure the distance between the pillar
 across from C to the B pillar, the distance between the B pillar and
-the pillar across from A, and so on. Enter these parameters into
-Klipper:
+the pillar across from A, and so on.
+
+![delta_cal_e_step2](img/delta_cal_e_step2.png)
+
+Enter these parameters into Klipper:
 ```
 DELTA_ANALYZE OUTER_DISTS=<a_to_far_c>,<far_c_to_b>,<b_to_far_a>,<far_a_to_c>,<c_to_far_b>,<far_b_to_a>
 ```
@@ -133,6 +140,8 @@ center pillar along the A spoke, then the B spoke, and then the C
 spoke.
 
 ![delta-a-pillar](img/delta-a-pillar.jpg)
+
+![delta_cal_e_step3](img/delta_cal_e_step3.png)
 
 Enter them into Klipper:
 ```
@@ -147,7 +156,11 @@ across from C.
 
 Then go counterclockwise and measure the remaining outer pillars
 (pillar across from C along the line to B, B pillar along the line to
-pillar across from A, etc.) and enter them into Klipper:
+pillar across from A, etc.).
+
+![delta_cal_e_step4](img/delta_cal_e_step4.png)
+
+And enter them into Klipper:
 ```
 DELTA_ANALYZE OUTER_PILLAR_WIDTHS=<a>,<far_c>,<b>,<far_a>,<c>,<far_b>
 ```
